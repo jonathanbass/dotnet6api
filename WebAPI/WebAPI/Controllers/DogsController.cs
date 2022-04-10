@@ -21,6 +21,7 @@ namespace WebAPI.Controllers
         [HttpGet]
         public IEnumerable<Dog> GetDogs()
         {
+            _logger.LogDebug("Get all dogs called");
             return _dogRepository.GetDogs();
         }
 
